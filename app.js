@@ -1,6 +1,6 @@
-'use strict'
-
-const switcher = document.querySelector('.btn');
+'use strict';
+console.log('hi')
+var switcher = document.querySelector('.btn');
 
 switcher.addEventListener('click', function() {
     document.body.classList.toggle('dark-theme')
@@ -15,4 +15,4 @@ switcher.addEventListener('click', function() {
 
     console.log('current class name: ' + className);
 
-});https://docs.microsoft.com/en-us/learn/modules/build-simple-website/5-javascript-basics
+});
