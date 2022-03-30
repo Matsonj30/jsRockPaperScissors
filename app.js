@@ -1,4 +1,3 @@
-
 'use strict';
 console.log('hi')
 var switcher = document.querySelector('.btn');
