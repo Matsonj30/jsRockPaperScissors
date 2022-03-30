@@ -1,11 +1,11 @@
 const startButton = document.getElementById('startBtn');
 startButton.addEventListener("click", initiateGame);
-
+console.log(startButton.innerHTML)
 function initiateGame(){
-    var gameButtons = document.getElementsByClassName('gameBtnScore');
+    startButton.style.visibility = 'hidden';
+    var gameButtons = document.getElementsByClassName('gameBtnandScore');
     for(i = 0; i < gameButtons.length; i+= 1){
         for(j = 0; j < i; j+= 1);
-        console.log(gameButtons[i]);
-        //gameButtons[i].style.visibility = visible;
+        gameButtons[i].style.visibility = 'visible';
     }//for
 }

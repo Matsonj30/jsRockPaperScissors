@@ -1,7 +1,8 @@
 body{
   background-color: coral;
 }
-.gameBtnScore{
+
+.gameBtnandScore{
   visibility: hidden;
 }
 h1{
