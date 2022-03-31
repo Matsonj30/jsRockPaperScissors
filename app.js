@@ -11,21 +11,54 @@ function initiateGame(){
     }//for
 
     for(j = 0; j < gameButtons.length; j += 1){            //if a choice is clicked, pass to funciton to see who won
-        gameButtons[j].addEventListener('click', function(){ //cant just put playerChoice up here as it will run when it compiles?
-            playerChoice(this.innerHTML); //try using "this"?
+        gameButtons[j].addEventListener('click', function(){ //cant just put playerChoice up here as it will call when it compiles?
+            playerChoice(this.innerHTML.toLowerCase()); //lowercase is easier to match
         })
     }//for
 
 }//initiateGame
 function playerChoice(playerChoice){
-    var playerScore = document.getElementById('playerScore')
-    var compScore = document.getElementById('computerScore')
-    var roundNum = document.getElementById('roundNum')
-    var compChoice = computerChoice()
     console.log(playerChoice);
+    var compChoice = computerChoice()
     console.log(compChoice);
-   
-        
+
+    if(playerChoice == compChoice){
+        changeScore('tie');
+    }//if
+
+    else{
+        if(playerChoice == 'rock'){ //rock
+            if(compChoice == 'paper'){
+                changeScore('lose');
+            }//if
+            else{
+                changeScore('win');
+            }//else
+        }//if Rock
+
+
+        else if(playerChoice == 'paper'){ //paper
+            if(compChoice == 'scissors'){
+                changeScore('lose');
+            }//if
+            else{
+                changeScore('win');
+            }//else
+        }//elif Paper
+
+
+        else{                             //scissors
+            if(compChoice == rock){
+                changeScore('lose');
+            }//if
+            else{
+                changeScore('win');
+            }//inner else
+        }//else
+
+    }//outer else
+    
+       
 }//startGame
 
 function computerChoice(){
@@ -39,3 +72,9 @@ function computerChoice(){
     return null;
     }//switch
 }//computerChoice
+
+function changeScore(outcome){
+  var playerScore = document.getElementById('playerScore')
+  var compScore = document.getElementById('computerScore') 
+  var roundNum = document.getElementById('roundNum')
+}
