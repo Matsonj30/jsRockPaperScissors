@@ -48,7 +48,7 @@ function playerChoice(playerChoice){
 
 
         else{                             //scissors
-            if(compChoice == rock){
+            if(compChoice == 'rock'){
                 changeScore('lose');
             }//if
             else{
@@ -77,4 +77,5 @@ function changeScore(outcome){
   var playerScore = document.getElementById('playerScore')
   var compScore = document.getElementById('computerScore') 
   var roundNum = document.getElementById('roundNum')
+  console.log(outcome)
 }
