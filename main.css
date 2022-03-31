@@ -14,21 +14,22 @@ h1{
   margin: auto;
   display: block;
 }
-.GameButtons{
+.gameButtons{
   font-size: 30px;
   padding: 50px; /*Padding adjusts the height of the button*/
   white-space: nowrap;
   transform: translateY(450%);
   width: 33%;
-  align-content: stretch;
   margin-right: 5px;
+  border: none;
 }
 #rockButton{
- 
+ background-color: brown;
+ margin-left: 3px;
 }
 #paperButton{
-  
+  background-color: white;
 }
 #scissorsButton{
-  
+  background-color: teal;
 }
