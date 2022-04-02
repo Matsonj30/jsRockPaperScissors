@@ -69,13 +69,19 @@ function computerChoice(){
             return 'paper';
         case 2:
             return 'scissors';
-    return null;
     }//switch
 }//computerChoice
 
 function changeScore(outcome){
-  var playerScore = document.getElementById('playerScore')
-  var compScore = document.getElementById('computerScore') 
-  var roundNum = document.getElementById('roundNum')
-  console.log(outcome)
+  var playerScore = document.getElementById('playerScore');
+  var compScore = document.getElementById('computerScore');
+  var roundNum = document.getElementById('roundNum');
+  console.log(outcome);
+  if(outcome == 'win'){
+    playerScore.innerHTML = parseInt(playerScore.innerHTML) + 1;
+  }//if
+  else if(outcome == 'lose'){
+   compScore.innerHTML = parseInt(compScore.innerHTML) + 1;
+  }//elif
+  roundNum.innerHTML = parseInt(roundNum.innerHTML) + 1;
 }
