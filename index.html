@@ -11,19 +11,29 @@
 
 
 <body>
-    <h1 id="intro">Rock, Paper, Scissors</h1>
-    <button id="startBtn">Click here to start!</button>
+    <h1 id="intro">Rock Paper Scissors</h1>
+    <button id="startBtn">START GAME</button>
+    <button class = gameBtnandScore id="submitBtn">Submit</button>
+
+    <div class = "gameBtnandScore">
+        <p class="scoreTitle">Your Score</p>
+        <p class="scoreTitle">Computer Score</p>
+        <p class="scoreTitle">Round #</p>
+        
+    </div>
+    <div class ="gameBtnandScore">
+        <p class="score" id = "playerScore">0</p>
+        <p class="score" id = "computerScore">0</p>
+        <p class="score" id = "roundNum">1</p> 
+       
+    </div>
+
     <div class="gameBtnandScore">
         <button class="gameButtons" id="rockButton">Rock</button>
         <button class="gameButtons" id="paperButton">Paper</button>
         <button class="gameButtons" id="scissorsButton">Scissors</button>
     </div>
-
-    <div class ="gameBtnandScore">
-        <p class="score" id = "playerScore">0</p>
-        <p class="score" id = "computerScore">0</p>
-        <p class="score" id = "roundNum">1</p> 
-    </div>
+    
 
 </body>
 
